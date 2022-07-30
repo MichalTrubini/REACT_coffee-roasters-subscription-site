@@ -1,15 +1,33 @@
 body {
-    background-color: #FEFCF7;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 400;
-    text-align: center;
+  background-color: #fefcf7;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  text-align: center;
 }
 
-h1, h2, h3, h4, button {
-    font-family: 'Fraunces', serif;
-    font-weight: 900;
+h1,
+h2,
+h3,
+h4,
+button {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
 }
 
 .margin-fix {
-    margin: 0 2.4rem;
+  margin: 0 2.4rem;
 }
+
+@media screen and (min-width: 525px) {
+  body {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+    .margin-fix {
+        margin: 0 4rem;
+      }
+
+  }

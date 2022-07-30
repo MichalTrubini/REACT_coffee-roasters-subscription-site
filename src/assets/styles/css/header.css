@@ -6,4 +6,31 @@
 }
 .header__logo {
   width: 16.3rem;
+}
+.header__list {
+  display: none;
+}
+
+@media screen and (min-width: 525px) {
+  .header__hamburger {
+    display: none;
+  }
+  .header__list {
+    display: flex;
+    gap: 3.3rem;
+  }
+  .header__list-item {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    color: #83888F;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__nav {
+    padding: 4rem 0 5.3rem;
+  }
+  .header__logo {
+    width: 263px;
+  }
 }/*# sourceMappingURL=header.css.map */

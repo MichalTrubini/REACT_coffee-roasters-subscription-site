@@ -1,3 +1,5 @@
+@import 'variables';
+
 .header {
 
     &__nav {
@@ -11,4 +13,43 @@
         width: 16.3rem;
     }
 
+    &__list {
+        display: none;
+    }
+}
+
+@media screen and (min-width:525px) {
+
+    .header {
+
+        &__hamburger {
+            display: none;
+        }
+
+        &__list {
+            display: flex;
+            gap: 3.3rem;
+        }
+
+        &__list-item {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            text-transform: uppercase;
+            color: $Grey;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .header {
+
+        &__nav {
+            padding: 4rem 0 5.3rem;
+        }
+
+        &__logo {
+            width: 263px;
+        }
+    }
 }

@@ -16,4 +16,21 @@
   font-size: 1.5rem;
   line-height: 2.5rem;
   margin-bottom: 3.9rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__home {
+    background: url("../../images/home/tablet/image-hero-coffeepress.jpg") no-repeat;
+    background-size: cover;
+    padding: 10.4rem 5.8rem;
+    margin-bottom: 14.4rem;
+  }
+  .hero__header {
+    width: 62%;
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+  }
+  .hero__text {
+    width: 62%;
+  }
 }/*# sourceMappingURL=hero.css.map */

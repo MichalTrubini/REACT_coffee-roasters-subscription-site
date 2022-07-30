@@ -4,7 +4,7 @@
 .collection__header {
   font-size: 4rem;
   line-height: 7.2rem;
-  background: linear-gradient(180deg, #2C343E, #FEFCF7);
+  background: linear-gradient(180deg, #2c343e, #fefcf7);
   color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
@@ -81,6 +81,7 @@
 }
 
 .steps__home {
+  padding: 0 2.4rem;
   margin-bottom: 12rem;
 }
 .steps__home-header {
@@ -97,4 +98,61 @@
 }
 .steps__margin-fix {
   margin-bottom: 8rem;
+}
+
+@media screen and (min-width: 525px) {
+  .collection__item {
+    display: flex;
+  }
+  .collection__header {
+    text-align: center;
+  }
+  .highlights {
+    margin-bottom: 50rem;
+    padding: 5.6rem 0 36.8rem;
+  }
+  .highlights__intro {
+    padding: 0 7.4rem;
+  }
+  .highlights__item {
+    padding: 4.1rem 4.8rem;
+    display: flex;
+    align-items: center;
+    gap: 5.5rem;
+  }
+  .highlights__item-img {
+    margin: 0;
+    width: 5.6rem;
+  }
+  .highlights__img-container {
+    width: 5.6rem;
+  }
+  .highlights__item-text {
+    padding: 0;
+  }
+  .highlights__content-container {
+    width: 68%;
+  }
+  .highlights__items {
+    left: 0;
+    right: 0;
+    top: 25.5rem;
+    margin: auto;
+    width: 80%;
+  }
+  .highlights__item {
+    width: 100%;
+  }
+  .steps__home {
+    padding-left: 2.4rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .collection__header {
+    font-size: 9.6rem;
+    line-height: 7.2rem;
+    background: linear-gradient(180deg, rgba(44, 52, 62, 0.3411764706), #fefcf7);
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
 }/*# sourceMappingURL=home.css.map */

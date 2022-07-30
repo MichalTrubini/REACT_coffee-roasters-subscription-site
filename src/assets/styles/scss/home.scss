@@ -1,122 +1,194 @@
-@import 'variables';
+@import "variables";
 
 .collection {
+  margin-bottom: 12rem;
 
-    margin-bottom: 12rem;
+  &__header {
+    font-size: 4rem;
+    line-height: 7.2rem;
+    background: linear-gradient(180deg, #2c343e, #fefcf7);
+    color: transparent;
+    background-clip: text;
+    margin-bottom: 1.3rem;
+  }
 
-    &__header {
-        font-size: 4rem;
-        line-height: 7.2rem;
-        background: linear-gradient(180deg, #2C343E, #FEFCF7);
-        color: transparent;
-        background-clip: text;
-        margin-bottom: 1.3rem;
-    }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+  }
 
-    &__list {
-        display: flex;
-        flex-direction: column;
-        gap: 4.8rem;
-    }
+  &__img {
+    max-width: 25.5rem;
+    width: 53.33%;
+    margin-bottom: 2.4rem;
+  }
 
-    &__img {
-        max-width: 25.5rem;
-        width: 53.33%;
-        margin-bottom: 2.4rem;
-    }
+  &__title {
+    color: $header-dark;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    margin-bottom: 1.6rem;
+  }
 
-    &__title {
-        color: $header-dark;
-        font-size: 2.4rem;
-        line-height: 3.2rem;
-        margin-bottom: 1.6rem;
-    }
-
-    &__text {
-        color: $par-dark;
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-    }
+  &__text {
+    color: $par-dark;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
 }
 
 .highlights {
+  background-color: $background-why-us;
+  border-radius: 1rem;
+  margin-bottom: 71.7rem;
+  padding: 6.4rem 2.4rem 66.1rem;
+  position: relative;
 
-    background-color: $background-why-us;
-    border-radius: 1rem;
-    margin-bottom: 71.7rem;
-    padding: 6.4rem 2.4rem 66.1rem;
-    position: relative;
+  &__header {
+    color: $header-light;
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 2.4rem;
+  }
 
-    &__header {
-        color: $header-light;
-        font-size: 2.8rem;
-        line-height: 2.8rem;
-        margin-bottom: 2.4rem;
-    }
+  &__text {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: $par-light;
+    opacity: 0.8;
+  }
 
-    &__text {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-        color: $par-light;
-        opacity: 0.8;
-    }
+  &__items {
+    position: absolute;
+    top: 30.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
 
-    &__items {
-        position: absolute;
-        top: 30.5rem;
-        display: flex;
-        flex-direction: column;
-        gap: 2.4rem;
-    }
+  &__item {
+    background-color: $background-highlights;
+    padding: 7.2rem 0 5.1rem;
+    border-radius: 8px;
+    width: calc(100% - 2.4rem);
+  }
 
-    &__item {
-        background-color: $background-highlights;
-        padding: 7.2rem 0 5.1rem;
-        border-radius: 8px;
-        width: calc(100% - 2.4rem);
-    }
+  &__item-img {
+    margin-bottom: 5.6rem;
+  }
 
-    &__item-img {
-        margin-bottom: 5.6rem;
-    }
+  &__item-header {
+    color: $header-light;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    margin-bottom: 2.4rem;
+  }
 
-    &__item-header {
-        color: $header-light;
-        font-size: 2.4rem;
-        line-height: 3.2rem;
-        margin-bottom: 2.4rem;
-    }
-
-    &__item-text {
-        color: $par-light;
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-        padding: 0 3.5rem;
-    }
+  &__item-text {
+    color: $par-light;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 0 3.5rem;
+  }
 }
 
 .steps {
+  &__home {
+    padding: 0 2.4rem;
+    margin-bottom: 12rem;
+  }
 
+  &__home-header {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    margin-bottom: 8rem;
+    color: $Grey;
+  }
+
+  &__item-title-dark {
+    color: $header-dark;
+  }
+
+  &__item-text-dark {
+    color: $par-dark;
+  }
+
+  &__margin-fix {
+    margin-bottom: 8rem;
+  }
+}
+
+@media screen and (min-width: 525px) {
+  .collection {
+    &__item {
+      display: flex;
+    }
+
+    &__header {
+      text-align: center;
+    }
+  }
+
+  .highlights {
+    margin-bottom: 50rem;
+    padding: 5.6rem 0 36.8rem;
+
+    &__intro {
+      padding: 0 7.4rem;
+    }
+
+    &__item {
+      padding: 4.1rem 4.8rem;
+      display: flex;
+      align-items: center;
+      gap: 5.5rem;
+    }
+
+    &__item-img {
+      margin: 0;
+      width: 5.6rem;
+    }
+
+    &__img-container {
+      width: 5.6rem;
+    }
+
+    &__item-text {
+      padding: 0;
+    }
+
+    &__content-container {
+      width: 68%;
+    }
+
+    &__items {
+      left: 0;
+      right: 0;
+      top: 25.5rem;
+      margin: auto;
+      width: 80%;
+    }
+
+    &__item {
+      width: 100%;
+    }
+  }
+
+  .steps {
     &__home {
-        margin-bottom: 12rem;
+      padding-left: 2.4rem;
     }
+  }
+}
 
-    &__home-header {
-        font-size: 2.4rem;
-        line-height: 3.2rem;
-        margin-bottom: 8rem;
-        color: $Grey;
+@media screen and (min-width: 768px) {
+  .collection {
+    &__header {
+      font-size: 9.6rem;
+      line-height: 7.2rem;
+      background: linear-gradient(180deg, #2c343e57, #fefcf7);
+      background-clip: text;
     }
-
-    &__item-title-dark {
-        color: $header-dark;
-    }
-
-    &__item-text-dark {
-        color: $par-dark;
-    }
-
-    &__margin-fix {
-        margin-bottom: 8rem;
-    }
+  }
 }

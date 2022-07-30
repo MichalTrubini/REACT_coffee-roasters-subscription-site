@@ -36,3 +36,23 @@
         gap: 2.4rem;
     }
 }
+
+@media screen and (min-width:525px) {
+
+    .footer {
+
+        &__container {
+            gap: 0;
+        }
+
+        &__logo {
+            margin-bottom: 3.2rem;
+        }
+
+        &__list {
+            flex-direction: row;
+            gap: 3.3rem;
+            margin-bottom: 6.5rem;
+        }
+    }
+}

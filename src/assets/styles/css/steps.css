@@ -3,9 +3,6 @@
   flex-direction: column;
   gap: 5.6rem;
 }
-.steps__item {
-  padding: 0 2.4rem;
-}
 .steps__item-order {
   color: #FDD6BA;
   font-size: 7.2rem;

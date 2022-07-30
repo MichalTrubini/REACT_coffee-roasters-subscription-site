@@ -24,3 +24,27 @@
         margin-bottom: 3.9rem;
     }
 }
+
+@media screen and (min-width:768px) {
+
+    .hero {
+
+        &__home {
+            background: url('../../images/home/tablet/image-hero-coffeepress.jpg') no-repeat;
+            background-size: cover;
+            padding: 10.4rem 5.8rem;
+            margin-bottom: 14.4rem;
+        }
+
+        &__header {
+            width: 62%;
+            font-size: 4.8rem;
+            line-height: 4.8rem;
+        }
+
+        &__text {
+            width: 62%;
+        }
+    }
+
+}
