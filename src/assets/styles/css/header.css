@@ -1,0 +1,9 @@
+.header__nav {
+  padding: 3.2rem 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  width: 16.3rem;
+}/*# sourceMappingURL=header.css.map */
