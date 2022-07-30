@@ -4,7 +4,7 @@ import Button from './Button';
 const Hero = (props) => {
 
     return ( 
-        <section className='hero padding'>
+        <section className='hero margin-fix'>
             <div className={props.className}>
                 <h1 className="hero__header">{props.header}</h1>
                 <p className="hero__text">{props.text}</p>

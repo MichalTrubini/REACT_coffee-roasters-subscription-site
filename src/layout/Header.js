@@ -5,7 +5,7 @@ import '../assets/styles/css/header.css'
 
 const Header = () => {
     return ( 
-        <header className="header padding">
+        <header className="header margin-fix">
             <nav className="header__nav">
                 <a href='/'><img src={logo} alt="coffeeroasters" className='header__logo'/></a>
                 <img src={hamburger} alt="menu"/>
