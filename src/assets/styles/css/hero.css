@@ -1,0 +1,17 @@
+.hero__home {
+  background: url("../../images/home/mobile/image-hero-coffeepress.jpg") no-repeat;
+  background-size: cover;
+  padding: 10rem 2.4rem;
+}
+.hero__header {
+  color: #FEFCF7;
+  font-size: 4rem;
+  line-height: 4rem;
+  margin-bottom: 2.4rem;
+}
+.hero__text {
+  color: #FEFCF7;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 3.9rem;
+}/*# sourceMappingURL=hero.css.map */

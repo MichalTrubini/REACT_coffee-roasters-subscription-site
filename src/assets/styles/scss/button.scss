@@ -1,0 +1,11 @@
+@import 'variables';
+
+.button {
+    background-color: $background-button-s1;
+    border: none;
+    color: $color-button;
+    border-radius: 6px;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    padding: 1.5rem 3.2rem;
+}
