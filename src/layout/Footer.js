@@ -3,10 +3,25 @@ import facebook from "../assets/images/shared/desktop/icon-facebook.svg";
 import twitter from "../assets/images/shared/desktop/icon-twitter.svg";
 import instagram from "../assets/images/shared/desktop/icon-instagram.svg";
 
+import { Link } from 'react-router-dom';
+
 import "../assets/styles/css/footer.css";
 
 const Footer = () => {
-  const menuItems = ["home", "about us", "create your plan"];
+  const menuItems = [
+    {
+      page: 'home',
+      path: '/'
+    },
+    {
+      page: 'about us',
+      path: '/about'
+    },
+    {
+      page: 'create your plan',
+      path: '/subscription'
+    }
+  ]
 
   return (
     <footer className="footer margin-fix">
@@ -14,9 +29,9 @@ const Footer = () => {
         <img src={logo} alt="coffeeroasters" className="footer__logo" />
         <ul className="footer__list">
           {menuItems.map((item) => (
-            <li key={item} className="footer__list-item">
-              {item}
-            </li>
+            <Link to={item.path} key={item.page} className="footer__list-item">
+              {item.page}
+            </Link>
           ))}
         </ul>
         <div className="footer__social">
