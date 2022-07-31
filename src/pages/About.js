@@ -4,8 +4,40 @@ import '../assets/styles/css/about.css';
 import '../assets/styles/css/hero.css';
 
 import commitment from '../assets/images/about/mobile/image-commitment.jpg';
+import quality from '../assets/images/about/mobile/image-quality.jpg';
 
 const About = () => {
+
+    const locations = [
+        {
+            id: 1,
+            src: './images/about/desktop/illustration-uk.svg',
+            country: 'United Kingdom',
+            street: '68 Asfordby Rd',
+            city: 'Alcaston',
+            zip: 'SY6 1YA',
+            phone: '+44 1241 918425'
+        },
+        {
+            id: 2,
+            src: './images/about/desktop/illustration-canada.svg',
+            country: 'Canada',
+            street: '1528 Eglinton Avenue',
+            city: 'Toronto  Ontario',
+            zip: 'M4P 1A6',
+            phone: '+1 416 485 2997'
+        },
+        {
+            id: 3,
+            src: './images/about/desktop/illustration-australia.svg',
+            country: 'Australia',
+            street: '36 Swanston Street',
+            city: 'Kewell',
+            zip: 'Victoria',
+            phone: '+61 4 9928 3629'
+        }
+    ]
+
     return ( 
         <main>
             <Hero 
@@ -23,9 +55,27 @@ const About = () => {
                 </div>
             </section>
             <section className="quality margin-fix">
+                <img src={quality} alt='quality' className="quality__img"/>
                 <div className="quality__content">
                     <h2 className="quality__header">Uncompromising quality</h2>
                     <p className="quality__text">Although we work with growers who pay close attention to all stages of harvest and processing, we employ, on our end, a rigorous quality control program to avoid over-roasting or baking the coffee dry. Every bag of coffee is tagged with a roast date and batch number. Our goal is to roast consistent, user-friendly coffee, so that brewing is easy and enjoyable.</p>
+                </div>
+            </section>
+            <section className="locations margin-fix">
+                <h2 className="locations__header">Our headquarters</h2>
+                <div className="locations__items">
+                    {locations.map(item => 
+                        <div className="locations__item" key={item.id}>
+                            <img className="locations__img" src={item.src} alt={item.country} />
+                            <h3 className="locations__item-header">{item.country}</h3>
+                            <div className="locations__address-container">
+                                <p className="locations__item-address">{item.street}</p>
+                                <p className="locations__item-address">{item.city}</p>
+                                <p className="locations__item-address">{item.zip}</p>
+                                <p className="locations__item-address">{item.phone}</p>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </section>
         </main>

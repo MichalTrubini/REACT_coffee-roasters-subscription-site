@@ -29,6 +29,7 @@
     margin-bottom: 12rem;
     padding: 14.2rem 2.4rem 6.1rem;
     border-radius: 1rem;
+    position: relative;
 
     &__header {
         font-size: 2.8rem;
@@ -42,5 +43,50 @@
         line-height: 2.5rem;
         color: $par-light;
         opacity: 0.8;
+    }
+
+    &__img {
+        position: absolute;
+        top: -75px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 0.8rem;
+        width: 277px;
+    }
+}
+
+.locations {
+    margin-bottom: 12rem;
+
+    &__header {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        color: $Grey;
+        margin-bottom: 7.2rem;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+    }
+
+    &__img {
+        width: 4rem;
+        margin-bottom: 4.8rem;
+    }
+
+    &__item-header {
+        font-size: 2.8rem;
+        line-height: 3.6rem;
+        color: $header-dark;
+        margin-bottom: 2.2rem;
+    }
+
+    &__item-address {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        color: $par-dark;
     }
 }
