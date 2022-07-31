@@ -57,3 +57,25 @@
         }
     }
 }
+
+@media screen and (min-width:1440px) {
+
+    .footer {
+
+        &__container {
+            padding: 4.7rem 8.5rem;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__logo {
+            margin-bottom: 0;
+        }
+
+        &__list {
+            margin-bottom: 0;
+            position: relative;
+            left: -120px;
+        }
+    }
+}

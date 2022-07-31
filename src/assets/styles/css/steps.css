@@ -37,7 +37,7 @@
   }
   .steps__line {
     height: 1px;
-    width: 96%;
+    width: calc(100% - 8px);
     display: block;
     background-color: #FDD6BA;
     position: absolute;
@@ -46,5 +46,26 @@
   }
   .steps__line--03 {
     display: none;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .steps__item-title {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    margin-bottom: 4.2rem;
+    width: 75%;
+  }
+  .steps__item-text {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+  .steps__items {
+    gap: 9.5rem;
+  }
+  .steps__line {
+    width: 120%;
+  }
+  .steps__diagram {
+    margin-bottom: 6.7rem;
   }
 }/*# sourceMappingURL=steps.css.map */

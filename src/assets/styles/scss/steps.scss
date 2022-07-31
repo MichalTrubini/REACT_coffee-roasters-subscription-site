@@ -50,7 +50,7 @@
 
         &__line {
             height: 1px;
-            width: 96%;
+            width: calc(100% - 8px);
             display: block;
             background-color: $Pale-Orange;
             position: absolute;
@@ -60,6 +60,34 @@
 
         &__line--03 {
             display: none;
+        }
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .steps {
+        &__item-title {
+            font-size: 3.2rem;
+            line-height: 3.6rem;
+            margin-bottom: 4.2rem;
+            width: 75%;
+        }
+
+        &__item-text {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+        }
+
+        &__items {
+            gap: 9.5rem;
+        }
+
+        &__line {
+            width: 120%;
+        }
+
+        &__diagram {
+            margin-bottom: 6.7rem;
         }
     }
 }

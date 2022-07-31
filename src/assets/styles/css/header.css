@@ -22,6 +22,7 @@
   .header__list-item {
     font-size: 1.2rem;
     line-height: 1.5rem;
+    letter-spacing: 0.92px;
     text-transform: uppercase;
     color: #83888F;
   }
@@ -32,5 +33,10 @@
   }
   .header__logo {
     width: 263px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header__nav {
+    padding: 4.4rem 0;
   }
 }/*# sourceMappingURL=header.css.map */

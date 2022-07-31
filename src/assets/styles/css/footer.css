@@ -42,4 +42,19 @@
     gap: 3.3rem;
     margin-bottom: 6.5rem;
   }
+}
+@media screen and (min-width: 1440px) {
+  .footer__container {
+    padding: 4.7rem 8.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer__logo {
+    margin-bottom: 0;
+  }
+  .footer__list {
+    margin-bottom: 0;
+    position: relative;
+    left: -120px;
+  }
 }/*# sourceMappingURL=footer.css.map */

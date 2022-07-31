@@ -64,6 +64,7 @@
     top: 30.5rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2.4rem;
   }
 
@@ -216,7 +217,7 @@
   .highlights {
 
     margin-bottom: 45rem;
-    
+
     &__intro {
         text-align: center;
         width: 94%;
@@ -231,6 +232,11 @@
     &__content-container {
         width: 80%;
     }
+
+    &__item {
+      max-width: 60rem;
+    }
+
   }
 
   .steps {
@@ -245,6 +251,98 @@
 
     &__margin-fix {
         margin-bottom: 4.4rem;
+    }
+  }
+}
+
+@media screen and (min-width:1440px) {
+  .collection {
+    margin-bottom: 10rem;
+    &__header {
+      font-size: 15rem;
+      line-height: 15rem;
+    }
+
+    &__list {
+      flex-direction: row;
+      gap: 3rem;
+      padding: 0 9.5rem;
+      top: -100px;
+    }
+
+    &__item {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__content-container {
+      width: auto;
+    }
+
+    &__text {
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+    }
+  }
+
+  .highlights {
+
+    padding: 10rem 0 31.7rem;
+    margin-bottom: 36rem;
+
+    &__header {
+      font-size: 4rem;
+      margin-bottom: 3.2rem;
+    }
+    &__text {
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      width: 50%;
+      margin: auto;
+    }
+
+    &__items {
+      flex-direction: row;
+      width: 87%;
+      gap: 3rem;
+      top: 34.5rem;
+    }
+
+    &__item {
+      flex-direction: column;
+      text-align: center;
+      padding: 7.2rem 4.8rem 4.8rem;
+      gap: 5.6rem;
+      min-width: 35rem;
+    }
+
+    &__img-container, &__item-img {
+      width: 7.2rem;
+    }
+
+    &__item-img--3 {
+      margin-bottom: 2rem;
+    }
+
+    &__item-text {
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+    }
+
+    &__content-container {
+      width: 100%;
+    }
+  }
+
+  .steps {
+    &__home {
+      width: 78%;
+      margin: 0 auto 20rem;
+      padding: 0;
+    }
+
+    &__home-header {
+      margin-bottom: 8rem;
     }
   }
 }

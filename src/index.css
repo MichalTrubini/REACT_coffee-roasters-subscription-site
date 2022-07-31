@@ -8,8 +8,7 @@ body {
 h1,
 h2,
 h3,
-h4,
-button {
+h4 {
   font-family: "Fraunces", serif;
   font-weight: 900;
 }
@@ -30,4 +29,12 @@ button {
         margin: 0 4rem;
       }
 
-  }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .margin-fix {
+        margin: 0 8rem;
+      }
+
+}

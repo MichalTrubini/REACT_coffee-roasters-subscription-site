@@ -97,7 +97,7 @@ const Home = () => {
             <div className="highlights__item" key={item.title}>
               <div className="highlights__img-container">
                 <img
-                  className="highlights__item-img"
+                  className={"highlights__item-img--" + item.id + " highlights__item-img"}
                   src={item.img}
                   alt={item.title}
                 />

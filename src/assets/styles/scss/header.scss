@@ -34,6 +34,7 @@
         &__list-item {
             font-size: 1.2rem;
             line-height: 1.5rem;
+            letter-spacing: 0.92px;
             text-transform: uppercase;
             color: $Grey;
         }
@@ -51,5 +52,17 @@
         &__logo {
             width: 263px;
         }
+    }
+}
+
+@media screen and (min-width:1440px) {
+
+    .header {
+
+        &__nav {
+            padding: 4.4rem 0;
+        }
+
+
     }
 }
