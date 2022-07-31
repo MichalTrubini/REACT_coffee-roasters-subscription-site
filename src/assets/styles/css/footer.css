@@ -13,6 +13,7 @@
   font-size: 1.2rem;
   line-height: 1.5rem;
   letter-spacing: 0.92px;
+  font-weight: 700;
   text-transform: uppercase;
   color: #83888F;
 }
@@ -41,6 +42,14 @@
     flex-direction: row;
     gap: 3.3rem;
     margin-bottom: 6.5rem;
+  }
+  .footer__list-item:hover, .footer__list-item:focus {
+    cursor: pointer;
+    color: #FEFCF7;
+  }
+  .footer__social-icon:hover, .footer__social-icon:focus {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(89%) sepia(6%) saturate(2523%) hue-rotate(317deg) brightness(105%) contrast(98%);
   }
 }
 @media screen and (min-width: 1440px) {

@@ -52,6 +52,12 @@
         &__logo {
             width: 263px;
         }
+
+        &__list-item:hover, &__list-item:focus {
+            cursor: pointer;
+            font-weight: 700;
+            color: $Dark-Grey-Blue;
+        }
     }
 }
 

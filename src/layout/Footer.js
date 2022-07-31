@@ -14,16 +14,18 @@ const Footer = () => {
         <img src={logo} alt="coffeeroasters" className="footer__logo" />
         <ul className="footer__list">
           {menuItems.map((item) => (
-            <li key={item} className="footer__list-item">{item}</li>
+            <li key={item} className="footer__list-item">
+              {item}
+            </li>
           ))}
         </ul>
         <div className="footer__social">
-          <img src={facebook} alt="facebook" className="fotter__social-icon" />
-          <img src={twitter} alt="twitter" className="fotter__social-icon" />
+          <img src={facebook} alt="facebook" className="footer__social-icon" />
+          <img src={twitter} alt="twitter" className="footer__social-icon" />
           <img
             src={instagram}
             alt="instagram"
-            className="fotter__social-icon"
+            className="footer__social-icon"
           />
         </div>
       </div>

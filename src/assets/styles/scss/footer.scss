@@ -17,6 +17,7 @@
         font-size: 1.2rem;
         line-height: 1.5rem;
         letter-spacing: 0.92px;
+        font-weight: 700;
         text-transform: uppercase;
         color: $footer-list;
     }
@@ -54,6 +55,16 @@
             flex-direction: row;
             gap: 3.3rem;
             margin-bottom: 6.5rem;
+        }
+
+        &__list-item:hover, &__list-item:focus {
+            cursor: pointer;
+            color: $Light-Cream;
+        }
+
+        &__social-icon:hover, &__social-icon:focus {
+            cursor: pointer;
+            filter: brightness(0) saturate(100%) invert(89%) sepia(6%) saturate(2523%) hue-rotate(317deg) brightness(105%) contrast(98%);
         }
     }
 }

@@ -63,7 +63,7 @@
     gap: 9.5rem;
   }
   .steps__line {
-    width: 120%;
+    width: calc(100% + 65px);
   }
   .steps__diagram {
     margin-bottom: 6.7rem;
