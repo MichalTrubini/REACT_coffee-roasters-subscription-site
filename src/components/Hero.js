@@ -3,12 +3,14 @@ import Button from './Button';
 
 const Hero = (props) => {
 
-    return ( 
+    const location = window.location.pathname === '/';
+
+    return (
         <section className='hero margin-fix'>
-            <div className={props.className}>
+            <div className={props.className + ' hero__main'}>
                 <h1 className="hero__header">{props.header}</h1>
                 <p className="hero__text">{props.text}</p>
-                {<Button>Create your plan</Button>}
+                {location && <Button>Create your plan</Button>}
             </div>
         </section>
      );

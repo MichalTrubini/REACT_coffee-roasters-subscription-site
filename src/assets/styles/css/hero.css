@@ -1,9 +1,16 @@
+.hero__main {
+  border-radius: 1rem;
+  margin-bottom: 12rem;
+}
 .hero__home {
   background: url("../../images/home/mobile/image-hero-coffeepress.jpg") no-repeat;
   background-size: cover;
   padding: 10rem 2.4rem;
-  border-radius: 1rem;
-  margin-bottom: 12rem;
+}
+.hero__about {
+  background: url("../../images/about/mobile/image-hero-whitecup.jpg") no-repeat;
+  background-size: cover;
+  padding: 11.1rem 2.4rem 8.7rem;
 }
 .hero__header {
   color: #FEFCF7;

@@ -1,0 +1,37 @@
+.commitment {
+  margin-bottom: 12rem;
+}
+.commitment__img {
+  border-radius: 8px;
+  margin-bottom: 4.8rem;
+}
+.commitment__header {
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  margin-bottom: 3rem;
+  color: #333D4B;
+}
+.commitment__text {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #333D4B;
+}
+
+.quality {
+  background-color: #2C343E;
+  margin-bottom: 12rem;
+  padding: 14.2rem 2.4rem 6.1rem;
+  border-radius: 1rem;
+}
+.quality__header {
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  color: #FEFCF7;
+  margin-bottom: 2.4rem;
+}
+.quality__text {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #FEFCF7;
+  opacity: 0.8;
+}/*# sourceMappingURL=about.css.map */
