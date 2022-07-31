@@ -53,6 +53,9 @@
 }
 .highlights__items {
   position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
   top: 30.5rem;
   display: flex;
   flex-direction: column;
@@ -135,10 +138,7 @@
     width: 68%;
   }
   .highlights__items {
-    left: 0;
-    right: 0;
     top: 25.5rem;
-    margin: auto;
     width: 80%;
   }
   .highlights__item {
