@@ -31,6 +31,10 @@ const Steps = (props) => {
         <div className={props.classNameSteps + " steps__items"}>
             {steps.map(item => 
                 <div className="steps__item" key={item.id}>
+                    <div className="steps__diagram">
+                        <div className='steps__circle'></div>
+                        <div className={'steps__line--' + item.order + ' steps__line'}></div>
+                    </div>
                     <h2 className="steps__item-order">{item.order}</h2>
                     <h3 className={props.classNameHeader + " steps__item-title"}>{item.title}</h3>
                     <p className={props.classNamePar + " steps__item-text"}>{item.text}</p>
