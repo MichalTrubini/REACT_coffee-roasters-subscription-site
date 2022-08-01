@@ -2,7 +2,7 @@ import '../assets/styles/css/button.css';
 
 const Button = (props) => {
     return ( 
-        <button className="button">{props.children}</button>
+        <button className={props.classNameButton + " button"}>{props.children}</button>
      );
 }
  

@@ -57,6 +57,7 @@ const Home = () => {
     <main>
       <Hero
         className="hero__home"
+        classNameHeader="hero__home-header"
         header="Great coffee made simple."
         text="Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule."
       />

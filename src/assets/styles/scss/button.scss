@@ -9,9 +9,24 @@
     line-height: 2.5rem;
     padding: 1.5rem 3.2rem;
     font-family: "Fraunces", serif;
+
+    &__hero {
+        margin-top: 3.9rem;
+    }
 }
 
 .button:hover {
     cursor: pointer;
     background-color: #66D2CF;
+}
+
+
+@media screen and (min-width: 1440px) {
+
+    .button {
+    
+        &__hero {
+            margin-top: 5.6rem;
+        }
+    }
 }
