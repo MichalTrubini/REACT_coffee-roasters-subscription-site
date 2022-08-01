@@ -19,7 +19,13 @@
         padding: 11.1rem 2.4rem 8.7rem;
     }
 
-    &__home-header {
+    &__subscription {
+        background: url('../../images/plan/mobile/image-hero-blackcup.jpg') no-repeat;
+        background-size: cover;
+        padding: 10.1rem 2.4rem 13.6rem;
+    }
+
+    &__home-header, &__subscription-header {
         color: $header-light;
         font-size: 4rem;
         line-height: 4rem;
@@ -86,11 +92,24 @@
             margin-bottom: 13.6rem;
         }
 
+        &__about {
+            background: url('../../images/about/desktop/image-hero-whitecup.jpg') no-repeat;
+            background-size: cover;
+            padding: 13.5rem 8.5rem;
+            margin-bottom: 16.8rem;
+        }
+
         &__home-header {
             width: 50%;
             font-size: 7.2rem;
             line-height: 7.2rem;
             margin-bottom: 3.2rem;
+        }
+
+        &__about-header {
+            color: $header-light;
+            font-size: 4rem;
+            line-height: 4.8rem;
         }
 
         &__text {

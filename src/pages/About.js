@@ -54,7 +54,8 @@ const About = () => {
             <section className='commitment margin-fix'>
                 <picture className='commitment__img-container'>
                     <source media="(max-width: 767px)" srcSet={commitmentSmall} />
-                    <source media="(max-width: 1440px)" srcSet={commitmentMedium} />
+                    <source media="(max-width: 1339px)" srcSet={commitmentMedium} />
+                    <source media="(min-width: 1440px)" srcSet={commitmentLarge} />
                     <img src={commitmentSmall} alt="commitment" className="commitment__img"/>
                 </picture>
                 <div className="commitment__content">
@@ -65,7 +66,8 @@ const About = () => {
             <section className="quality margin-fix">
                 <picture>
                     <source media="(max-width: 767px)" srcSet={qualitySmall} />
-                    <source media="(max-width: 1440px)" srcSet={qualityMedium} />
+                    <source media="(max-width: 1439px)" srcSet={qualityMedium} />
+                    <source media="(min-width: 1440px)" srcSet={qualityLarge} />
                     <img src={qualitySmall} alt="commitment" className="quality__img"/>
                 </picture>
                 <div className="quality__content">

@@ -1,0 +1,12 @@
+@import "variables";
+
+.plan {
+    background-color: $background-dark;
+    border-radius: 1rem;
+    padding: 8rem 2.4rem;
+    margin-bottom: 12rem;
+
+    &__header, &__text {
+        color: $header-light;
+    }
+}
