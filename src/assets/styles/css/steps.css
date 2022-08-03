@@ -47,6 +47,12 @@
   .steps__line--03 {
     display: none;
   }
+  .steps__item-order {
+    margin-bottom: 4.2rem;
+  }
+  .steps__item-title {
+    margin-bottom: 3.8rem;
+  }
 }
 @media screen and (min-width: 1440px) {
   .steps__item-title {

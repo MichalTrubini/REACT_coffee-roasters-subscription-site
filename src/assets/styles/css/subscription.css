@@ -35,6 +35,7 @@
 .choices__card {
   padding: 2.4rem;
   background-color: #F4F1EB;
+  border-radius: 0.8rem;
 }
 .choices__card-header {
   font-size: 2.4rem;
@@ -72,4 +73,41 @@
 }
 .summary__choice {
   color: #0E8784;
+}
+
+@media screen and (min-width: 768px) {
+  .plan {
+    padding: 5.6rem 3.4rem 6.3rem 4.5rem;
+  }
+  .choices {
+    gap: 10rem;
+    margin-bottom: 14.4rem;
+  }
+  .choices__row {
+    margin-bottom: 4rem;
+  }
+  .choices__header {
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+  }
+  .choices__items {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .choices__card {
+    padding: 3.2rem 2.5rem 8.4rem;
+  }
+  .choices__card-header {
+    margin-bottom: 2.4rem;
+  }
+  .summary {
+    margin-bottom: 14.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .summary__content {
+    padding: 2.74rem 4.4rem;
+    margin-bottom: 4rem;
+  }
 }/*# sourceMappingURL=subscription.css.map */
