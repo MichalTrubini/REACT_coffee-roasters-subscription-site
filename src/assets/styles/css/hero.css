@@ -77,10 +77,16 @@
   .hero__about {
     background: url("../../images/about/desktop/image-hero-whitecup.jpg") no-repeat;
     background-size: cover;
-    padding: 13.5rem 8.5rem;
+    padding: 13.4rem 8.5rem;
     margin-bottom: 16.8rem;
   }
-  .hero__home-header {
+  .hero__subscription {
+    background: url("../../images/plan/desktop/image-hero-blackcup.jpg") no-repeat;
+    background-size: cover;
+    padding: 13.4rem 8.5rem;
+    margin-bottom: 16.8rem;
+  }
+  .hero__home-header, .hero__subscription-header {
     width: 50%;
     font-size: 7.2rem;
     line-height: 7.2rem;

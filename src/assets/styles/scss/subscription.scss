@@ -10,6 +10,11 @@
   &__text {
     color: $header-light;
   }
+
+  &__container-left {
+    display: none;
+  }
+
 }
 
 .choices {
@@ -134,4 +139,68 @@
         margin-bottom: 4rem;
     }
   }
+}
+
+@media screen and (min-width: 1440px) {
+    .plan {
+        margin: 0 8rem 16.8rem;
+        padding: 8.5rem 15rem 9.9rem 8.5rem;
+
+        &__wrapper {
+            display: flex;
+            gap: 12.5rem;
+        }
+
+        &__container-left {
+            display: flex;
+            flex-direction: column;
+            max-width:18vw;
+            width: 100%;
+        }
+
+        &__item {
+            display: flex;
+            gap: 2.85rem;
+            font-family: "Fraunces", serif;
+            color: rgba(51, 61, 75, 0.4);
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+            padding: 2.4rem 0;
+            border-bottom: 1px solid rgba(131, 136, 143, 0.25);
+        }
+
+        &__item:first-child {
+            padding: 0 0 2.4rem;
+        }
+
+        &__item:last-child {
+            border: none;
+        }
+    }
+    .choices {
+        margin: 0 0 8.8rem 0;
+        gap: 8.8rem;
+
+        &__header {
+            font-size: 4rem;
+            line-height: 4.8rem;
+        }
+
+        &__row {
+            margin-bottom: 5.6rem;
+        }
+
+        &__card {
+            padding: 3.2rem 2.8rem 8.4rem;
+        }
+    }
+
+    .summary {
+        margin: 0 0 16.8rem 0;
+        align-items: flex-end;
+        
+        &__content {
+            padding: 2.7rem 6.4rem;
+        }
+    }
 }

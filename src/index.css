@@ -17,6 +17,11 @@ h4 {
   margin: 0 2.4rem;
 }
 
+.page {
+  max-width: 198rem;
+  margin: auto;
+}
+
 @media screen and (min-width: 525px) {
   body {
     text-align: left;

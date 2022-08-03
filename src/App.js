@@ -25,14 +25,16 @@ function App() {
   return (
 
     <Suspense fallback={<p>Loading...</p>}>
-      {showMenu && <MobileMenu src={close} ShowMenuHandler={ShowMenuHandler}/>}
-      <Header src={hamburger} ShowMenuHandler={ShowMenuHandler}/>
-        <Routes>
-          <Route path="/" exact element={<Home />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/subscription" element={<Subscription />}></Route>
-        </Routes>
-      <Footer />
+      <div className="page">
+        {showMenu && <MobileMenu src={close} ShowMenuHandler={ShowMenuHandler}/>}
+        <Header src={hamburger} ShowMenuHandler={ShowMenuHandler}/>
+          <Routes>
+            <Route path="/" exact element={<Home />}></Route>
+            <Route path="/about" element={<About />}></Route>
+            <Route path="/subscription" element={<Subscription />}></Route>
+          </Routes>
+        <Footer />
+      </div>
     </Suspense>
   );
 }

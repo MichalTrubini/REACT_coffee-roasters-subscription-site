@@ -68,7 +68,7 @@
 .locations__img-container {
   width: 4.2rem;
   height: 4.8rem;
-  margin-bottom: 4.8rem;
+  margin: 0 auto 4.8rem;
 }
 .locations__item-header {
   font-size: 2.8rem;
@@ -119,6 +119,10 @@
     font-size: 2.4rem;
     margin-bottom: 2.1rem;
   }
+  .locations__img-container {
+    margin: 0;
+    margin-bottom: 4.8rem;
+  }
 }
 @media screen and (min-width: 1440px) {
   .commitment {
@@ -161,8 +165,8 @@
     top: -90px;
   }
   .locations {
-    max-width: 77vw;
-    margin: 0 auto 16.8rem;
+    max-width: 182rem;
+    margin: 0 8rem 16.8rem;
   }
   .locations__items {
     gap: 9.5rem;
