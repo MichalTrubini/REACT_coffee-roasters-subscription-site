@@ -4,12 +4,13 @@ import "../assets/styles/css/subscription.css";
 import "../assets/styles/css/hero.css";
 import Steps from "../components/Steps";
 import ChoicesSingle from "../components/ChoiceSingle";
-import arrow from "../assets/images/plan/desktop/icon-arrow.svg";
 import Button from "../components/Button";
+import { useState } from "react";
 
 const Subscription = () => {
   const choicesLong = [
     {
+      id: 'id-1',
       header: "How do you drink your coffee?",
       content: [
         {
@@ -27,6 +28,7 @@ const Subscription = () => {
       ],
     },
     {
+      id: 'id-2',
       header: "What type of coffee?",
       content: [
         {
@@ -44,6 +46,7 @@ const Subscription = () => {
       ],
     },
     {
+      id: 'id-3',
       header: "How much would you like?",
       content: [
         {
@@ -61,6 +64,7 @@ const Subscription = () => {
       ],
     },
     {
+      id: 'id-4',
       header: "Want us to grind them?",
       content: [
         {
@@ -78,6 +82,7 @@ const Subscription = () => {
       ],
     },
     {
+      id: 'id-5',
       header: "How often should we deliver?",
       content: [
         {
@@ -119,6 +124,23 @@ const Subscription = () => {
     },
   ];
 
+  const [clickedID, setClickedID] = useState([]);
+
+  const expandHandler = (event) => {
+
+    let old = [...clickedID];
+
+    setClickedID(() => {
+      const index = old.indexOf(event.target.id);
+
+      index ===  -1  ? old.push(event.target.id) : old.splice(index,1);
+
+      return old;
+    })
+
+    
+  }
+
   return (
     <main>
       <Hero
@@ -141,14 +163,13 @@ const Subscription = () => {
           ))}
         </div>
         <div className="plan__container-right">
-          <section className="choices margin-fix">
+          <section className="choices">
             {choicesLong.map((item) => (
-              <div className="choices__container" key={item.header}>
+              <div className="choices__container" key={item.id}>
                 <div className="choices__row">
-                  <h2 className="choices__header">{item.header}</h2>
-                  <img src={arrow} alt="arrow" />
+                  <h2 className={clickedID.includes(item.id) ? "choices__header choices__header-selected" : "choices__header"} id={item.id} onClick={expandHandler}>{item.header}</h2>
                 </div>
-                <div className="choices__items">
+                <div className={clickedID.includes(item.id) ? "choices__items choices__items-selected" : "choices__items"}>
                   {item.content.map((choice) => (
                     <ChoicesSingle
                       key={choice.type}

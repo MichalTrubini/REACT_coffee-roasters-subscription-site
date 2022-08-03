@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import "../assets/styles/css/home.css";
 import Steps from "../components/Steps";
 import Button from "../components/Button";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const collection = [
@@ -118,7 +119,7 @@ const Home = () => {
           classNameHeader="steps__item-title-dark"
           classNamePar="steps__item-text-dark"
         />
-        <Button>Create your plan</Button>
+        <Link to='/subscription'><Button>Create your plan</Button></Link>
       </section>
     </main>
   );
