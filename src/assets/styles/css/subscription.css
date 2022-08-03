@@ -6,4 +6,70 @@
 }
 .plan__header, .plan__text {
   color: #FEFCF7;
+}
+
+.choices {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 11rem;
+  margin-bottom: 12rem;
+}
+.choices__header {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  color: #83888F;
+  width: 80%;
+}
+.choices__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3.2rem;
+}
+.choices__items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.choices__card {
+  padding: 2.4rem;
+  background-color: #F4F1EB;
+}
+.choices__card-header {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  margin-bottom: 0.8rem;
+}
+.choices__card-text {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: #333D4B;
+}
+
+.summary {
+  margin-bottom: 12rem;
+}
+.summary__content {
+  background-color: #2C343E;
+  border-radius: 1rem;
+  padding: 3.2rem 2.4rem;
+  color: #FEFCF7;
+  text-align: left;
+  margin-bottom: 5.6rem;
+}
+.summary__title {
+  text-transform: uppercase;
+  opacity: 0.5;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  margin-bottom: 0.8rem;
+}
+.summary__summary {
+  font-size: 2.4rem;
+  line-height: 4rem;
+  font-family: "Fraunces", serif;
+}
+.summary__choice {
+  color: #0E8784;
 }/*# sourceMappingURL=subscription.css.map */
