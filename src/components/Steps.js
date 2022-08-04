@@ -1,3 +1,5 @@
+import React from 'react';
+
 import '../assets/styles/css/steps.css';
 
 const Steps = (props) => {
@@ -46,4 +48,4 @@ const Steps = (props) => {
      );
 }
  
-export default Steps;
+export default React.memo(Steps);

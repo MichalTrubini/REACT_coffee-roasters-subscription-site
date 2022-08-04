@@ -77,6 +77,12 @@
     padding: 2.4rem;
     background-color: $background-choice;
     border-radius: 0.8rem;
+    color: $par-dark;
+  }
+
+  &__card-selected {
+    background-color: $background-highlights;
+    color: $par-light;
   }
 
   &__card-header {
@@ -88,12 +94,12 @@
   &__card-text {
     font-size: 1.6rem;
     line-height: 2.6rem;
-    color: $par-dark;
   }
 }
 
 .summary {
   margin-bottom: 12rem;
+  position: relative;
 
   &__content {
     background-color: $background-dark;
@@ -120,6 +126,16 @@
 
   &__choice {
     color: $Dark-Cyan;
+  }
+
+  &__warning {
+    color: red;
+    font-size: 1.5rem;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 70px;
   }
 }
 
@@ -148,6 +164,7 @@
 
     &__card {
         padding: 3.2rem 2.5rem 8.4rem;
+        width: 100%;
     }
 
     &__card-header {
@@ -238,6 +255,10 @@
 
         &__content {
             padding: 2.7rem 6.4rem;
+        }
+
+        &__warning {
+          text-align: right;
         }
     }
 }

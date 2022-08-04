@@ -1,3 +1,5 @@
+import React from 'react';
+
 import logo from "../assets/images/shared/desktop/logo-light.svg";
 import facebook from "../assets/images/shared/desktop/icon-facebook.svg";
 import twitter from "../assets/images/shared/desktop/icon-twitter.svg";
@@ -48,4 +50,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default React.memo(Footer);

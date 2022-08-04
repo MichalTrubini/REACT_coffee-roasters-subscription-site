@@ -22,6 +22,10 @@ h4 {
   margin: auto;
 }
 
+main {
+  margin-top: 9.3rem;
+}
+
 @media screen and (min-width: 525px) {
   body {
     text-align: left;
@@ -29,17 +33,16 @@ h4 {
 }
 
 @media screen and (min-width: 768px) {
-
-    .margin-fix {
-        margin: 0 4rem;
-      }
-
+  main {
+    margin-top: 12.5rem;
+  }
+  .margin-fix {
+    margin: 0 4rem;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-
-    .margin-fix {
-        margin: 0 8rem;
-      }
-
+  .margin-fix {
+    margin: 0 8rem;
+  }
 }

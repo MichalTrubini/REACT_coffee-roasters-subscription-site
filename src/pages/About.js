@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Hero from "../components/Hero";
 
 import '../assets/styles/css/about.css';
@@ -98,4 +100,4 @@ const About = () => {
      );
 }
  
-export default About;
+export default React.memo(About);

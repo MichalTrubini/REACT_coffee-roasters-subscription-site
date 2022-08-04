@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Hero from "../components/Hero";
 
 import "../assets/styles/css/home.css";
@@ -125,4 +127,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default React.memo(Home);
