@@ -31,9 +31,9 @@ const Footer = () => {
         <img src={logo} alt="coffeeroasters" className="footer__logo" />
         <ul className="footer__list">
           {menuItems.map((item) => (
-            <Link to={item.path} key={item.page} className="footer__list-item">
+            <li key={item.page}><Link to={item.path} className="footer__list-item">
               {item.page}
-            </Link>
+            </Link></li>
           ))}
         </ul>
         <div className="footer__social">
