@@ -1,34 +1,67 @@
-import {createSlice, configureStore} from '@reduxjs/toolkit';
+import { createSlice, configureStore } from "@reduxjs/toolkit";
 
 const elementVisibilitySlice = createSlice({
-    name: 'isVisibleElement',
-    initialState: {showElement: false},
-    reducers: {
-        isVisible(state) {
-            state.showElement = !state.showElement
-        }
-    }
-})
+  name: "isVisibleElement",
+  initialState: { showElement: false },
+  reducers: {
+    isVisible(state) {
+      state.showElement = !state.showElement;
+    },
+  },
+});
 
- const selectionHandlerSlice = createSlice({
-    name: 'selectionHandler',
-    initialState: {expandElement: []},
-    reducers: {
-        expandHandler(state, event) {
+const initialState = { 
+    clickedIDs: [], 
+    resultSelection: ['...', '...','...','...','...'],
+    completedSelection: false,
+    orderSummaryVisible: false
+};
 
-              const index = state.indexOf(event.target.id);
-        
-              index ===  -1  ? state.push(event.target.id) : state.splice(index,1);
-        
-        }
+const groupOne = ["Capsule","Filter","Espresso"];
+const groupTwo = ["Single Origin","Decaf","Blended"];
+const groupThree = ["250g","500g","1000g"];
+const groupFour = ["Wholebean","Filter ","Cafetiére"];
+const groupFive = ["Every week","Every 2 weeks","Every month"];
+
+const selectionHandlerSlice = createSlice({
+  name: "selectionHandler",
+  initialState,
+  reducers: {
+    expandHandler(state, action) {
+      let old = state.clickedIDs;
+      console.log(action.payload)
+      const index = old.indexOf(action.payload);
+      index === -1
+        ? state.clickedIDs.push(action.payload)
+        : state.clickedIDs.splice(index, 1);
+    },
+    selectionHadler(state, action) {
+        if (groupOne.includes(action.payload)) state.resultSelection[0] = action.payload;
+        if (groupTwo.includes(action.payload)) state.resultSelection[1] = action.payload;
+        if (groupThree.includes(action.payload)) state.resultSelection[2] = action.payload;
+        if (groupFour.includes(action.payload)) state.resultSelection[3] = action.payload;
+        if (groupFive.includes(action.payload)) state.resultSelection[4] = action.payload;
+    },
+    orderSummaryChecker(state) {
+        if (state.resultSelection.includes('...')) state.completedSelection = true
+        else {state.completedSelection = false; state.orderSummaryVisible = true};
+    },
+    checkoutHandler(state) {
+        state.orderSummaryVisible = false;
+        state.resultSelection = ['...', '...','...','...','...'];
+        state.clickedIDs = [];
     }
-})
+  },
+});
 
 export const visibilityActions = elementVisibilitySlice.actions;
 export const selectionActions = selectionHandlerSlice.actions;
 
 const store = configureStore({
-    reducer: { visibility: elementVisibilitySlice.reducer, selection: selectionHandlerSlice.reducer}
+  reducer: {
+    visibility: elementVisibilitySlice.reducer,
+    selection: selectionHandlerSlice.reducer,
+  },
 });
 
 export default store;

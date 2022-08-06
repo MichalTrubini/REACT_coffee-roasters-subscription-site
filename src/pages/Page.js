@@ -15,11 +15,11 @@ import SiteContext from "../services/context/site-context";
 const Page = () => {
 
     //const {showMenu} = useContext(SiteContext);
-    const {showSummary} = useContext(SiteContext);
+    //const {showSummary} = useContext(SiteContext);
     const showMenu = useSelector(state => state.visibility.showElement);
+    const showSummary = useSelector(state => state.selection.orderSummaryVisible);
 
-    showMenu === true ? document.body.style.overflow = "hidden" : document.body.style.overflow = "visible";
-    //showSummary === true ? document.body.style.overflow = "hidden" : document.body.style.overflow = "visible";
+    (showMenu === true || showSummary === true) ? document.body.style.overflow = "hidden" : document.body.style.overflow = "visible";
   
     const Home = React.lazy(() => import('./Home'));
     const About = React.lazy(() => import('./About'));
