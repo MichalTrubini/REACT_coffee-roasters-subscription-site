@@ -5,14 +5,12 @@ import "../assets/styles/css/hero.css";
 import Steps from "../components/Steps";
 import ChoicesSingle from "../components/ChoiceSingle";
 import Button from "../components/Button";
-import React, { useContext } from "react";
-import SiteContext from "../services/context/site-context";
+import React from "react";
 
 import { selectionActions } from "../store";
 import { useDispatch, useSelector } from "react-redux";
-import { click } from "@testing-library/user-event/dist/click";
 
-const Subscription = (props) => {
+const Subscription = () => {
   const choicesLong = [
     {
       id: "id-1",
@@ -166,16 +164,8 @@ const Subscription = (props) => {
   }
 
   const clickedID = useSelector((state) => state.selection.clickedIDs);
-  console.log(clickedID);
   const resultSelection = useSelector((state) => state.selection.resultSelection);
   const selectionComplete = useSelector(state => state.selection.completedSelection);
-
-  //const {clickedID} = useContext(SiteContext);
-  //const {expandHandler} = useContext(SiteContext);
-  //const {selectionHandler} = useContext(SiteContext);
-  //const {resultSelection} = useContext(SiteContext);
-  //const { selectioInComplete } = useContext(SiteContext);
-  //const { orderSummaryChecker } = useContext(SiteContext);
 
   return (
     <main>

@@ -2,19 +2,16 @@ import Button from "./Button";
 
 import "../assets/styles/css/orderSummary.css";
 import useWindowDimensions from "../services/functions/WindowDimensions";
-import React, { useContext } from "react";
+import React from "react";
 import {useDispatch} from 'react-redux';
-import SiteContext from "../services/context/site-context";
 import { selectionActions } from "../store";
 
-const OrderSummary = (props) => {
+const OrderSummary = () => {
   const price = "$14.00 / mo";
 
   const { width } = useWindowDimensions();
 
   const tabletScreen = width > 767;
-
-  //const {checkoutHandler} = useContext(SiteContext);
 
   const dispatch = useDispatch();
 

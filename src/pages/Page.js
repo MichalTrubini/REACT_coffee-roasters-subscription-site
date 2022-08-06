@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import React, { Suspense, useContext } from "react";
+import React, { Suspense } from "react";
 
 import Footer from '../layout/Footer';
 import Header from "../layout/Header";
@@ -10,12 +10,8 @@ import close from '../assets/images/shared/mobile/icon-close.svg';
 import OrderSummary from "../components/OrderSummary";
 import {useSelector} from 'react-redux';
 
-import SiteContext from "../services/context/site-context";
-
 const Page = () => {
 
-    //const {showMenu} = useContext(SiteContext);
-    //const {showSummary} = useContext(SiteContext);
     const showMenu = useSelector(state => state.visibility.showElement);
     const showSummary = useSelector(state => state.selection.orderSummaryVisible);
 

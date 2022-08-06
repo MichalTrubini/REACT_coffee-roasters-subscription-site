@@ -1,3 +1,6 @@
+//CONTEXT HAS NOT BEEN USED IN THE END
+//REDUX TOOLKIT IMPLEMENTED
+
 import React, { createContext, useState } from "react";
 
 const SiteContext = createContext();
