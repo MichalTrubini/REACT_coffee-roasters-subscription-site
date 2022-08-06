@@ -67,7 +67,7 @@
   color: #333D4B;
 }
 .choices__card-selected {
-  background-color: #0E8784;
+  background-color: #0E8784 !important;
   color: #FEFCF7;
 }
 .choices__card-header {
@@ -131,6 +131,9 @@
     font-size: 3.2rem;
     line-height: 4.8rem;
   }
+  .choices__header:hover, .choices__header:focus {
+    cursor: pointer;
+  }
   .choices__items {
     flex-direction: row;
     gap: 1rem;
@@ -138,6 +141,10 @@
   .choices__card {
     padding: 3.2rem 2.5rem 8.4rem;
     width: 100%;
+  }
+  .choices__card:hover, .choices__card:focus {
+    cursor: pointer;
+    background-color: #FDD6BA;
   }
   .choices__card-header {
     margin-bottom: 2.4rem;
@@ -181,6 +188,10 @@
     line-height: 3.2rem;
     padding: 2.4rem 0;
     border-bottom: 1px solid rgba(131, 136, 143, 0.25);
+  }
+  .plan__item:hover, .plan__item:focus {
+    cursor: pointer;
+    color: #333D4B;
   }
   .plan__item:first-child {
     padding: 0 0 2.4rem;

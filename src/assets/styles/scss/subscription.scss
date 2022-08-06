@@ -81,7 +81,7 @@
   }
 
   &__card-selected {
-    background-color: $background-highlights;
+    background-color: $background-highlights!important;
     color: $par-light;
   }
 
@@ -157,6 +157,10 @@
       line-height: 4.8rem;
     }
 
+    &__header:hover, &__header:focus {
+      cursor: pointer;
+    }
+
     &__items {
         flex-direction: row;
         gap: 1rem;
@@ -165,6 +169,11 @@
     &__card {
         padding: 3.2rem 2.5rem 8.4rem;
         width: 100%;
+    }
+
+    &__card:hover, &__card:focus {
+      cursor: pointer;
+      background-color: $Pale-Orange;
     }
 
     &__card-header {
@@ -217,6 +226,11 @@
             line-height: 3.2rem;
             padding: 2.4rem 0;
             border-bottom: 1px solid rgba(131, 136, 143, 0.25);
+        }
+
+        &__item:hover, &__item:focus {
+          cursor: pointer;
+          color: $par-dark;
         }
 
         &__item:first-child {
