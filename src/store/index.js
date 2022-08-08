@@ -36,6 +36,11 @@ const selectionHandlerSlice = createSlice({
         ? state.clickedIDs.push(action.payload)
         : state.clickedIDs.splice(index, 1);
     },
+    expandHadlerError(state, action){
+      let old = state.clickedIDs;
+      const index = old.indexOf(action.payload);
+      if (index === -1) state.clickedIDs.push(action.payload);
+    },
     selectionHadler(state, action) {
       if (groupOne.includes(action.payload))
         state.resultSelection[0] = action.payload;

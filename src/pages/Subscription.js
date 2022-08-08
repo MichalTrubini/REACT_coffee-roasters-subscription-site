@@ -192,7 +192,7 @@ const Subscription = () => {
       window.scrollTo({top: y, behavior: 'smooth'});
 
       // expand element that was scrolled to
-      dispatch(selectionActions.expandHandler(incompleteChoiceID));
+      dispatch(selectionActions.expandHadlerError(incompleteChoiceID));
 
       // add warning for the user
       let warning = document.createElement("div");
