@@ -202,7 +202,7 @@ const Subscription = () => {
       element.parentNode.insertBefore(warning, element.nextSibling)
 
     }
-  },[incompleteChoiceID]);
+  },[incompleteChoiceID, width, dispatch]);
 
   return (
     <main>
