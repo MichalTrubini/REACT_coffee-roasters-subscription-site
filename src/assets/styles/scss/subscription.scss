@@ -38,13 +38,13 @@
     position: absolute;
     right: 0;
     top: 50%;
-    transform: rotate(-180deg);
+    transform: rotate(0deg);
     transition: transform 1s ease;
     background: url('../../images/plan/desktop/icon-arrow.svg') no-repeat;
   }
 
   &__header-selected::after{
-    transform: rotate(0deg);
+    transform: rotate(-180deg);
   }
 
   &__container {
