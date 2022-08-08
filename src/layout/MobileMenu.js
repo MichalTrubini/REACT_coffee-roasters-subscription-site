@@ -15,9 +15,8 @@ const MobileMenu = (props) => {
         dispatch (visibilityActions.isVisible())
     }
 
-    const mobileMenuPortal = () => {
-        return ( 
-            <>
+    return ( 
+        <>
             <div className="mobile-menu">
                 <Header src={props.src}/>
                 <ul className='mobile-menu__list'>
@@ -27,15 +26,7 @@ const MobileMenu = (props) => {
                 </ul>
             </div>
             <div className='mobile-menu__overlay'></div>
-            </>
-         );
-    }
-
-    return ( 
-        <>
-            {ReactDOM.createPortal(<mobileMenuPortal/>, document.getElementById('mobileMenu-root'))}
         </>
-
      );
 }
  
