@@ -5,7 +5,8 @@ import "../assets/styles/css/hero.css";
 import Steps from "../components/Steps";
 import ChoicesSingle from "../components/ChoiceSingle";
 import Button from "../components/Button";
-import React from "react";
+import React, { useEffect } from "react";
+import useWindowDimensions from "../services/functions/WindowDimensions";
 
 import { selectionActions } from "../store";
 import { useDispatch, useSelector } from "react-redux";
@@ -157,15 +158,51 @@ const Subscription = () => {
     dispatch(
       selectionActions.selectionHadler(event.target.getAttribute("dataid"))
     );
-  };
 
+    //remove warning message if user made a choice
+
+    const warningMessage = document.getElementById('summary__warning');
+
+    if(warningMessage) warningMessage.remove();
+
+  };
+  const incompleteChoiceID = useSelector(state => state.selection.incompleteChoiceID);
+ 
   const orderSummaryChecker = () => {
     dispatch(selectionActions.orderSummaryChecker());
+    
   }
+
+  const {width} = useWindowDimensions();
 
   const clickedID = useSelector((state) => state.selection.clickedIDs);
   const resultSelection = useSelector((state) => state.selection.resultSelection);
-  const selectionComplete = useSelector(state => state.selection.completedSelection);
+
+  useEffect(() => {
+    if (incompleteChoiceID !== '') {
+
+      // scroll adjusted for fixed header
+      const yOffset = () => {
+        if (width < 767) return -100
+        else return -120;
+      }; 
+
+      const element = document.querySelector(`[datatest=${incompleteChoiceID}]`);
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset();
+      window.scrollTo({top: y, behavior: 'smooth'});
+
+      // expand element that was scrolled to
+      dispatch(selectionActions.expandHandler(incompleteChoiceID));
+
+      // add warning for the user
+      let warning = document.createElement("div");
+      warning.setAttribute('id','summary__warning');
+      warning.appendChild(document.createTextNode('Please complete your selection'));
+
+      element.parentNode.insertBefore(warning, element.nextSibling)
+
+    }
+  },[incompleteChoiceID]);
 
   return (
     <main>
@@ -200,6 +237,7 @@ const Subscription = () => {
                         : "choices__header"
                     }
                     dataid={item.id}
+                    datatest={item.id}
                     onClick={expandHandler}
                   >
                     {item.header}
@@ -246,9 +284,6 @@ const Subscription = () => {
                 <span className="summary__choice">{resultSelection[4]}</span>.”
               </p>
             </div>
-            {selectionComplete && (
-              <p className="summary__warning">You must make your selection</p>
-            )}
             <Button onClick={orderSummaryChecker}>Create my plan!</Button>
           </section>
         </div>

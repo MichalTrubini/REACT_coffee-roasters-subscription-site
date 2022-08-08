@@ -23,7 +23,7 @@
   color: #83888F;
   width: 80%;
 }
-.choices__header::after {
+.choices__header::before {
   content: "";
   display: block;
   width: 19px;
@@ -35,16 +35,13 @@
   transition: transform 1s ease;
   background: url("../../images/plan/desktop/icon-arrow.svg") no-repeat;
 }
-.choices__header-selected::after {
+.choices__header-selected::before {
   transform: rotate(-180deg);
 }
 .choices__container {
   overflow: hidden;
 }
 .choices__row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 3.2rem;
   position: relative;
 }
@@ -107,14 +104,12 @@
 .summary__choice {
   color: #0E8784;
 }
-.summary__warning {
+
+#summary__warning {
   color: red;
   font-size: 1.5rem;
-  position: absolute;
-  text-align: center;
-  left: 0;
-  right: 0;
-  bottom: 70px;
+  margin-top: 1rem;
+  text-align: left;
 }
 
 @media screen and (min-width: 768px) {
@@ -225,5 +220,9 @@
   }
   .summary__warning {
     text-align: right;
+  }
+  #summary__warning {
+    font-size: 2.4rem;
+    margin-top: 1rem;
   }
 }/*# sourceMappingURL=subscription.css.map */
