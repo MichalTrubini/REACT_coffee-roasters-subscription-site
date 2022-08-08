@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import '../assets/styles/css/mobileMenu.css';
 import Header from './Header';
